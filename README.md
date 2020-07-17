@@ -13,7 +13,6 @@ The goals of this project are the following:
 * Warp the detected lane boundaries back onto the original image.
 * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
-[//]: # (Image References)
 [image0]: ./output_images/calibration_distorted.jpg
 [image1]: ./output_images/calibration_undistorted.jpg
 [image2]: ./output_images/original_image.jpg
@@ -34,7 +33,7 @@ The goals of this project are the following:
 * moviepy
 * cv2
 
-## Project Dtructure
+## Project Structure
 
 * main.py: reads the data files and starts up the pipeline
 
@@ -58,7 +57,7 @@ intersection coordinates with `cv2.findChessboardCorners()` and find the
 calibration parameters with `cv2.calibrateCamera()`, after that we can use
 `cv2.undistort()` to undistort the images.
 
-Here is an example of an undistorted checkerboard image:
+Here is an example of original and undistorted checkerboard images:
 
 ![checkerboard_distorted][image0]
 ![checkerboard_undistorted][image1]
@@ -156,7 +155,7 @@ from pixels to meters.
 
 ### 7. Image Assembly
 
-The resulting image is assembled from the original image. On top of it
+The resulting image assembly starts from the original image. On top of it
 we draw a green lane which is first drawn onto a warped binary image
 and then warped back to original. Finally, in the top left corner
 lane curvature and car position shift are written.
@@ -169,7 +168,8 @@ Here's how it looks in the end:
 
 ### Video Demo
 
-Video demo from output_videos folder also available on youtube:
+Video demo from output_videos folder is also available on youtube:
+
 https://youtu.be/hQGlgKqA4Mk
 
 ---
